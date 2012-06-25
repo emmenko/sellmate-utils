@@ -7,17 +7,23 @@ Useful authentication module to connect your App with Sellmate (wwww.sellmate.co
 Testing
 =======
 
-    % npm test
+```bash
+$ npm test
+```
 
 Running with npm
 ================
 
-    % npm install node-sellmate
+```bash
+$ npm install node-sellmate
+```
 
 Run example
 
-    % node examples/server.js
-    % open http://localhost
+```bash
+$ node examples/server.js
+$ open http://localhost:8888
+```
 
 
 How to use it
@@ -27,8 +33,7 @@ Create a new OAuth2 object with some parameters (host is optional, default is 'a
 
 	var oa = new OAuth2(client_id, client_secret, redirectUri, host);
 
-[example]
-	var oa = new OAuth2('1234', 'qwertasdfgzxcv', 'http://localhost:8888/callback');
+	e.g.: var oa = new OAuth2('1234', 'qwertasdfgzxcv', 'http://localhost:8888/callback');
 
 Get the OAuth Request Token URL and call it
 
@@ -41,11 +46,3 @@ with the 'code' as a parameter. Now you can request an AccessToken
 		'shop': 'my-shop',
 		'grant_type': 'authorization_code',
 	}, function(error, response, body) {});
-
-
-Changelog
-=========
- * 0.1.1  
-		Added 'server.js' as a sample code and created some tests.
- * 0.1.0  
-		Created OAuth2 lib.
