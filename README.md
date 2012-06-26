@@ -46,7 +46,8 @@ with the `code` as a parameter. Now you can **request an AccessToken*:*
 		'shop': 'my-shop',
 		'grant_type': 'authorization_code',
 	}, function(error, response, body) {
-		// The body response contains some parameters among which you will find the `access_token` and the `refresh_token`
+		// The body response contains some parameters among which you will 
+		// find the `access_token` and the `refresh_token`
 	});
 	```
 
