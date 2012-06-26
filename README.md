@@ -1,35 +1,28 @@
 node-sellmate
 ============
 
-Useful authentication module to connect your App with Sellmate (wwww.sellmate.com).
+Useful authentication module to connect your App with Sellmate [www.sellmate.com](http://www.sellmate.com).
 
 
-Testing
-=======
-
-```bash
-$ npm test
-```
-
-Running with npm
-================
+Installation
+============
 
 ```bash
 $ npm install node-sellmate
 ```
 
-Run example
+or
 
 ```bash
-$ node examples/server.js
-$ open http://localhost:8888
+$ git clone git://github.com/emmenko/node-sellmate.git
+$ cd node-sellmate
+$ npm install
 ```
 
+Quick start
+===========
 
-How to use it
-=============
-
-Create a new OAuth2 object with some parameters (host is optional, default is 'auth.sellmate.com'):
+1. **Create a new OAuth2** object with some parameters (`host` is optional, default is 'auth.sellmate.com'):
 
 ```javascript
 var oa = new OAuth2(client_id, client_secret, redirectUri, host);
@@ -37,18 +30,35 @@ var oa = new OAuth2(client_id, client_secret, redirectUri, host);
 e.g.: var oa = new OAuth2('1234', 'qwertasdfgzxcv', 'http://localhost:8888/callback');
 ```
 
-Get the OAuth Request Token URL and call it
+2. Get the **OAuth Request Token URL** and call it:
 
 ```javascript
 var authUrl = oa.getAuthorizeUrl({ 'shop': 'my-shop' });
 ```
 
-Your App should have a callback servlet (i.e. http://localhost:8888/callback) where you get the notification
-with the 'code' as a parameter. Now you can request an AccessToken
+3. Your App should have a **callback servlet** (i.e. http://localhost:8888/callback) where you get the notification
+with the 'code' as a parameter. Now you can **request an AccessToken*:*
 
 ```javascript
 oa.getAccessToken(code, {
 	'shop': 'my-shop',
 	'grant_type': 'authorization_code',
 }, function(error, response, body) {});
+```
+
+Example
+=======
+
+There is an example app at [./example](https://github.com/emmenko/node-sellmate/tree/master/examples)
+
+```bash
+$ node examples/server.js
+$ open http://localhost:8888
+```
+
+Testing
+=======
+
+```bash
+$ npm test
 ```
