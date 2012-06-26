@@ -24,27 +24,31 @@ Quick start
 
 1. **Create a new OAuth2** object with some parameters (`host` is optional, default is 'auth.sellmate.com'):
 
-```javascript
-var oa = new OAuth2(client_id, client_secret, redirectUri, host);
+	```javascript
+	var oa = new OAuth2(client_id, client_secret, redirectUri, host);
 
-e.g.: var oa = new OAuth2('1234', 'qwertasdfgzxcv', 'http://localhost:8888/callback');
-```
+	e.g.: var oa = new OAuth2('1234', 'qwertasdfgzxcv', 'http://localhost:8888/callback');
+	```
 
-2. Get the **OAuth Request Token URL** and call it:
+2. Get the **OAuth Request Token URL** and call it (parameters are optional, i.e. `shop`):
 
-```javascript
-var authUrl = oa.getAuthorizeUrl({ 'shop': 'my-shop' });
-```
+	```javascript
+	var authUrl = oa.getAuthorizeUrl(params);
+
+	e.g.: var authUrl = oa.getAuthorizeUrl({ 'shop': 'my-shop' });
+	```
 
 3. Your App should have a **callback servlet** (i.e. http://localhost:8888/callback) where you get the notification
-with the 'code' as a parameter. Now you can **request an AccessToken*:*
+with the `code` as a parameter. Now you can **request an AccessToken*:*
 
-```javascript
-oa.getAccessToken(code, {
-	'shop': 'my-shop',
-	'grant_type': 'authorization_code',
-}, function(error, response, body) {});
-```
+	```javascript
+	oa.getAccessToken(code, {
+		'shop': 'my-shop',
+		'grant_type': 'authorization_code',
+	}, function(error, response, body) {
+		// The body response contains some parameters among which you will find the `access_token` and the `refresh_token`
+	});
+	```
 
 Example
 =======
