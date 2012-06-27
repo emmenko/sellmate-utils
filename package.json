@@ -24,6 +24,7 @@
     "test": "node tests/run.js"
   },
   "dependencies": {
+    "request": "*",
     "randomstring": "*"  
   },
   "devDependencies": {},
