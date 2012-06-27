@@ -1,21 +1,21 @@
-node-sellmate
-============
+sellmate-utils
+==============
 
-Useful authentication module to connect your App with Sellmate [www.sellmate.com](http://www.sellmate.com).
+Useful authentication module to help you connect your App with the Sellmate REST API [www.sellmate.com](http://www.sellmate.com).
 
 
 Installation
 ============
 
 ```bash
-$ npm install node-sellmate
+$ npm install sellmate-utils
 ```
 
 or
 
 ```bash
-$ git clone git://github.com/emmenko/node-sellmate.git
-$ cd node-sellmate
+$ git clone git://github.com/emmenko/sellmate-utils.git
+$ cd sellmate-utils
 $ npm install
 ```
 
@@ -54,7 +54,7 @@ with the `code` as a parameter. Now you can **request an AccessToken*:*
 Example
 =======
 
-There is an example app at [./example](https://github.com/emmenko/node-sellmate/tree/master/examples)
+There is an example app at [./example](https://github.com/emmenko/sellmate-utils/tree/master/examples)
 
 ```bash
 $ node examples/server.js
