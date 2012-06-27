@@ -1,14 +1,13 @@
 {
-  "name": "node-sellmate",
+  "name": "sellmate-utils",
   "description": "Help libs to authenticate against the Sellmate REST API",
   "tags": [
     "sellmate",
-    "oauth",
     "oauth2",
     "rest",
     "api"
   ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Nicola Molinari",
     "email": "nicola.molinari@commercetools.de"
@@ -25,8 +24,8 @@
     "test": "node tests/run.js"
   },
   "dependencies": {
-    
-    },
+    "randomstring": "*"  
+  },
   "devDependencies": {},
   "optionalDependencies": {}
 }
