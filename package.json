@@ -12,7 +12,7 @@
     "name": "Nicola Molinari",
     "email": "nicola.molinari@commercetools.de"
   },
-  "private": true,
+  "private": false,
   "engines": [
     "node >= 0.6.0"
   ],
