@@ -19,8 +19,8 @@ $ cd sellmate-utils
 $ npm install
 ```
 
-Quick start
-===========
+Quick start - OAuth2
+====================
 
 1. **Create a new OAuth2** object with some parameters (`host` is optional, default is 'auth.sellmate.com'):
 
@@ -50,6 +50,13 @@ with the `code` as a parameter. Now you can **request an AccessToken*:*
 		// find the `access_token` and the `refresh_token`
 	});
 	```
+
+Quick start - REST
+==================
+
+Coming soon...
+
+
 
 Example
 =======

@@ -7,7 +7,7 @@
     "rest",
     "api"
   ],
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": {
     "name": "Nicola Molinari",
     "email": "nicola.molinari@commercetools.de"
@@ -15,6 +15,9 @@
   "private": false,
   "engines": {
     "node": "*"
+  },
+  "repository": {
+    "url": "https://github.com/emmenko/sellmate-utils"
   },
   "directories" : { 
     "lib" : "./lib" 
