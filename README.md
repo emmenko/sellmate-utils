@@ -1,7 +1,7 @@
 sellmate-utils
 ==============
 
-Useful authentication module to help you connect your App with [www.sellmate.com](http://www.sellmate.com).
+Useful authentication module to help you connect your App with [Sellmate](http://www.sellmate.com).
 REST API Documentation is also available [here](http://commercetools.github.com/sellmate-api/).
 
 Installation
