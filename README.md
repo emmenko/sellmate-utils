@@ -11,12 +11,12 @@ Installation
 $ npm install sellmate-utils
 ```
 
-or
+or add it to your project dependencies `package.json`
 
-```bash
-$ git clone git://github.com/emmenko/sellmate-utils.git
-$ cd sellmate-utils
-$ npm install
+```json
+"dependencies": {
+	"sellmate-utils": "*"
+}
 ```
 
 Quick start - OAuth2
