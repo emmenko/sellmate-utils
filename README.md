@@ -1,8 +1,8 @@
 sellmate-utils
 ==============
 
-Useful authentication module to help you connect your App with the Sellmate REST API [www.sellmate.com](http://www.sellmate.com).
-
+Useful authentication module to help you connect your App with [www.sellmate.com](http://www.sellmate.com).
+REST API Documentation is also available [here](http://commercetools.github.com/sellmate-api/).
 
 Installation
 ============
@@ -39,7 +39,7 @@ Quick start - OAuth2
 	```
 
 3. Your App should have a **callback servlet** (i.e. http://localhost:8888/callback) where you get the notification
-with the `code` as a parameter. Now you can **request an AccessToken*:*
+with the `code` as a query parameter. Then you can **request an AccessToken*:*
 
 	```javascript
 	oa.getAccessToken(code, {
@@ -54,23 +54,26 @@ with the `code` as a parameter. Now you can **request an AccessToken*:*
 Quick start - REST
 ==================
 
-Coming soon...
+1. **Create a new Rest** object with the target url and the parameters needed for the authentication (`mac_key` and `access_token`):
 
+	```javascript
+	var target = "http://api.sellmate.com/<shop-handle>/rest/<resource>";	
+	var rest = new Rest(target, {
+		"mac_key": "abcd",
+		"access_token": "abcd"
+	});
+	```
 
+2. Use one of the four verbs `CRUD` to access a resource:
 
-Example
-=======
+	```javascript
+	rest.GET(function(error, response, body){
+		// Handle callback
+	});	
+	```
 
-There is an example app at [./example](https://github.com/emmenko/sellmate-utils/tree/master/examples)
+3. You can also request the `Authorization Header` with:
 
-```bash
-$ node examples/server.js
-$ open http://localhost:8888
-```
-
-Testing
-=======
-
-```bash
-$ npm test
-```
+	```javascript
+	var authHeader = rest.getAuthHeader();
+	```
