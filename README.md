@@ -1,11 +1,11 @@
-sellmate-utils
-==============
+<h1 align="center">This repository is deprecated and not maintained anymore</h1>
+
+## sellmate-utils
 
 Useful authentication module to help you connect your App with [Sellmate](http://www.sellmate.com).
 REST API Documentation is also available [here](http://commercetools.github.com/sellmate-api/).
 
-Installation
-============
+### Installation
 
 ```bash
 $ npm install sellmate-utils
@@ -19,8 +19,7 @@ or add it to your project dependencies `package.json`
 }
 ```
 
-Quick start - OAuth2
-====================
+### Quick start - OAuth2
 
 1. **Create a new OAuth2** object with some parameters (`host` is optional, default is 'auth.sellmate.com'):
 
@@ -51,8 +50,7 @@ with the `code` as a query parameter. Then you can **request an AccessToken*:*
 	});
 	```
 
-Quick start - REST
-==================
+### Quick start - REST
 
 1. **Create a new Rest** object with the target url and the parameters needed for the authentication (`mac_key` and `access_token`):
 
